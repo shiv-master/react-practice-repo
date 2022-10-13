@@ -1,3 +1,3 @@
 # react-practice-repo
 just for practice purpose
-created by shivam
+created by shivam mishra
