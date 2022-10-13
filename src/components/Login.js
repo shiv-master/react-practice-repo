@@ -27,6 +27,7 @@ const Login = () => {
             // success
             setIsAuth(true)
             setUser(userName)
+            localStorage.setItem("userName", userName)
             navigate('/home', 'replace')
         } else {
             // error
@@ -59,7 +60,7 @@ const Login = () => {
                             onChange={passwordHandler}
                         ></input>
                     </div>
-                    <button onClick={submitClicked}>Submit</button>
+                    <button className="btn-space" onClick={submitClicked} disabled={!userName || !password}>Submit</button>
                 </>
             ) : (
                 <>

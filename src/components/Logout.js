@@ -5,6 +5,7 @@ import Auth from './context/Auth'
 const Logout = () => {
     const { setIsAuth, setUser } = useContext(Auth)
     const linkClicked = () => {
+        localStorage.removeItem("userName")
         setIsAuth(false)
         setUser('')
     }

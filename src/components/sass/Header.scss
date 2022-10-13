@@ -1,4 +1,13 @@
 .navbar {
     display: flex;
-    margin: 0.5rem 2rem;
+    padding: 0.5rem 2rem;
+    background-color: lightcoral;
+    .navOption {
+        color: black;
+        text-decoration: none;
+    }
+    .navActive {
+        color: darkblue;   
+    }
 }
+

@@ -93,3 +93,16 @@ button {
 .btn-space:disabled {
   background-color: lightcyan;
 }
+
+.yellowBorder {
+  border: 1px solid yellow;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.topBtmSpace {
+  margin: 2rem 0rem;
+}

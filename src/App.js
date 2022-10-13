@@ -8,12 +8,14 @@ import Login from './components/Login';
 import Logout from './components/Logout';
 import Menu from './components/Menu';
 import Profile from './components/Profile';
+import Header from './components/Header'
 
 function App() {
   const { isAuth } = useContext(Auth)
 
   return (
     <div className="Center bg">
+      { isAuth && <Header /> }
       <Routes>
         <Route path='/' element={<Navigate to='login' replace />}></Route>
         <Route path='login' element={<Login />}></Route>

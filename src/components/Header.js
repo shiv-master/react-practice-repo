@@ -27,7 +27,7 @@ const Header = () => {
     return (
         <nav className="navbar">
             {
-                menu?.map((item, index) => <div key={index}><NavLink to={item.link}>{item.title}</NavLink></div>)
+                menu?.map((item, index) => <div key={index}><NavLink to={item.link} className={({ isActive }) => isActive ? 'navActive' : 'navOption'}>{item.title}</NavLink></div>)
             }
         </nav>
     )

@@ -1,11 +1,11 @@
-import { createStore } from "redux";
+import { combineReducers, createStore } from "redux";
 
-const initialState = {
+const initialCounterState = {
     counter: 0,
     cloth: ['tie', 'jeans', 'shoes', 'pants', 'shirt', 'trousers', 'belt']
 }
 
-const reducer = (state = initialState, action) => {
+const counterReducer = (state = initialCounterState, action) => {
     switch (action.type) {
         case 'INCREASE':
             return {
@@ -20,6 +20,26 @@ const reducer = (state = initialState, action) => {
             return state
     }
 }
+
+const initialShowState = {
+    show: false
+}
+
+const showReducer = (state = initialShowState, action) => {
+    switch (action.type) {
+        case "SHOW":
+            return { ...state, show: true }
+        case "HIDE":
+            return { ...state, show: false }
+        default:
+            return state
+    }
+}
+
+const reducer = combineReducers({
+    counter: counterReducer,
+    show: showReducer
+})
 
 const Store = createStore(reducer)
 
