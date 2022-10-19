@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
+import { counterActions, showActions } from "../store/Store"
 import Auth from "./context/Auth"
 
 const Home = () => {
@@ -69,12 +70,12 @@ const Home = () => {
                 show ?
                     <>
                         <div>{cloth[counter]}</div>
-                        <button className="btn-space" type="button" onClick={() => dispatch({ type: 'DECREASE', payload: 1 })} disabled={counter === 0}>Previous</button>
-                        <button className="btn-space" type="button" onClick={() => dispatch({ type: 'INCREASE', payload: 1 })} disabled={counter === 6}>Next</button>
-                        <button className="btn-space" type="button" onClick={() => dispatch({ type: "HIDE" })}>Hide Counter</button>
+                        <button className="btn-space" type="button" onClick={() => dispatch(counterActions.decrease(1))} disabled={counter === 0}>Previous</button>
+                        <button className="btn-space" type="button" onClick={() => dispatch(counterActions.increase(1))} disabled={counter === 6}>Next</button>
+                        <button className="btn-space" type="button" onClick={() => dispatch(showActions.hide())}>Hide Counter</button>
                     </>
                     :
-                    <button className="btn-space" type="button" onClick={() => dispatch({ type: "SHOW" })}>Show Counter</button>
+                    <button className="btn-space" type="button" onClick={() => dispatch(showActions.show())}>Show Counter</button>
             }
         </>
     )
