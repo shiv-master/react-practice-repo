@@ -42,7 +42,8 @@ const Home = () => {
             <h4>Welcome {user} to the world of practice.</h4>
             <input type='text' placeholder='Search' value={searchVal} onChange={searchChanged}></input>
             <div className="center">
-            <table className="topBtmSpace">
+            { searchData.length > 0 &&
+                <table className="topBtmSpace">
                 <thead>
                     <tr>
                         <th className="yellowBorder">ITEM</th>
@@ -62,6 +63,7 @@ const Home = () => {
                     }
                 </tbody>
             </table>
+            }
             </div>
             {
                 show ?
