@@ -1,4 +1,4 @@
-import './sass/Header.scss'
+import './scss/Header.scss'
 import { NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
@@ -11,6 +11,10 @@ const Header = () => {
             {
                 title: "Menu",
                 link: '/menu'
+            },
+            {
+                title: "Items",
+                link: '/items'
             },
             {
                 title: "Profile",

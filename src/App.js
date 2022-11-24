@@ -9,6 +9,7 @@ import Logout from './components/Logout';
 import Menu from './components/Menu';
 import Profile from './components/Profile';
 import Header from './components/Header'
+import Items from './components/Items';
 
 function App() {
   const { isAuth } = useContext(Auth)
@@ -23,6 +24,7 @@ function App() {
           <>
           <Route path='home' element={<Home />}></Route>
           <Route path='menu' element={<Menu />}></Route>
+          <Route path='items' element={<Items />}></Route>
           <Route path='profile' element={<Profile />}></Route>
           <Route path='logout' element={<Logout />}></Route>
           </>
