@@ -7,6 +7,12 @@ const Items = () => {
             <h5>Dictionary</h5>
             <div>It contains all information.</div>
         </div>
+        <div className='parent'>
+            parent
+            <div className='child child1'>one</div>
+            <div className='child child2'>two</div>
+            <div className='child child3'>three</div>
+        </div>
         <div className='grid_container'>
             <div className='grid_item grid_item1'>grid item1 Lorem ipsum dolor sit amet.</div>
             <div className='grid_item grid_item2'>grid item2</div>
