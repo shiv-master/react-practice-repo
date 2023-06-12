@@ -71,6 +71,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # react-practice-repo
 latest update on git
-feature branch created
+feature branch created and modified
 just for practice purpose
 created by shivam mishra
